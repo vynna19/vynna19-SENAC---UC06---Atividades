@@ -1,0 +1,168 @@
+﻿@model Interesse
+@{
+    ViewData["Title"] = "Hotsite";
+}
+
+<!-- Descrição-->
+<div class="col-6">
+    <h1>Iniciativa Saúde da Cidade</h1>
+    <p>
+        Texto sobre vida saudável: Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae legendos at
+        vix ad putent delectus delicata usu. Vidit dissentiet eos cu eum an brute copiosae hendrerit.
+    </p>
+    <p>
+        Texto sobre vida iniciativa: Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae legendos at
+        vix ad putent delectus delicata usu. Vidit dissentiet eos cu eum an brute copiosae hendrerit.
+    </p>
+</div>
+
+<!-- Imagem Maior-->
+<div class="col-6" style='width: 500px; margin-top: 25px; display: flex; justify-content: space-between;'>
+    <img src="https://www.al.sp.gov.br/repositorio/noticia/N-05-2016/fg189719.jpg" alt="academia"
+        style="width: 600px; height: 300px;">
+</div>
+
+<div class="col-6">
+    <h2>Entre em contato!</h2>
+    <p>Nos mande uma mensagem e fique por dentro de nossos eventos</p>
+
+    <form action="/Home/Cadastrar" method="POST">
+        <div>
+            <label asp-for="Nome">Nome:</label>
+            <input asp-for="Nome" />
+        </div>
+        <div>
+            <label asp-for="Email">Email:</label>
+            <input asp-for="Email" />
+        </div>
+        <div>
+            <label asp-for="Mensagem">Mensagem (opcional):</label>
+            <textarea asp-for="Mensagem"></textarea>
+        </div>
+        <div>
+            <input type="submit" value="Enviar" />
+        </div>
+    </form>
+</div>
+
+<!-- Imagens e Referências-->
+<div class="col-6" style='width: 500px; margin-top: 25px; display: flex; justify-content: space-between;'>
+    <a data-toggle="modal" href="#ModalAgenda" style="display: flex; flex-direction: column; align-items: center; font-size: 15px"><img
+            src="https://www.hub2b.com.br/blog/wp-content/uploads/2020/01/calendario-post-midias.jpg" alt="calendario"
+            style="width: 100px; height: 100px;"> Agenda de Eventos</a>
+    <a data-toggle="modal" href="#ModalDicas" style="display: flex; flex-direction: column; align-items: center; font-size: 15px"><img
+            src="https://3eaf214443cb92a1.cdn.gocache.net/wp-content/uploads/2018/02/healthy-lifestyle-concept-clean-food-good-health-dietary-in-heart-picture-id953674568-760x450.jpg"
+            alt="saudavel" style="width: 100px; height: 100px;"> Dicas de Vida Saudável</a>
+    <a data-toggle="modal" href="#ModalApoiadores" style="display: flex; flex-direction: column; align-items: center; font-size: 15px"><img
+            src="https://penseemti.com.br/wp-content/uploads/2020/04/apoiadores.png" alt="apoiadores"
+            style="width: 100px; height: 100px;"> Apoiadores</a>
+</div>
+
+
+
+<!-- Modal Dicas -->
+<div class="modal fade" id="ModalDicas" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="ModalDicas">Dicas de Vida Saudável</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget
+                quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+
+                Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue
+                laoreet rutrum faucibus dolor auctor.
+
+                Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl
+                consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.
+
+                Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget
+                quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Agenda -->
+<div class="modal fade" id="ModalAgenda" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="ModalAgenda">Agenda</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>10/10/10 - 10:10 - Evento 1
+                Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget
+                quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+                </p>
+
+                <p>10/10/10 - 10:10 - Evento 2
+                Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue
+                laoreet rutrum faucibus dolor auctor.
+                </p>
+
+
+                <p>10/10/10 - 10:10 - Evento 3
+                Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl
+                consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.
+                </p>
+
+
+                <p>10/10/10 - 10:10 - Evento 4
+                Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget
+                quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Apoiadores -->
+<div class="modal fade" id="ModalApoiadores" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="ModalApoiadores">Apoiadores</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <a style="display: flex; flex-direction: column; align-items: center; font-size: 15px"><img
+            src="https://blog.agenciadosite.com.br/wp-content/uploads/2017/02/logos-para-empresas-como-criar.png" alt="calendario"
+            style="width: 90px; height: 90px;"> Apoiador 1</a>
+
+                <a style="display: flex; flex-direction: column; align-items: center; font-size: 15px"><img
+            src="https://s2.glbimg.com/Bu6upvmSg6SRv0za635uXphThKo=/620x430/e.glbimg.com/og/ed/f/original/2020/03/28/mercado-livre.jpg" alt="calendario"
+            style="width: 90px; height: 90px;"> Apoiador 2</a>
+
+                <a style="display: flex; flex-direction: column; align-items: center; font-size: 15px"><img
+            src="https://www.tailorbrands.com/wp-content/uploads/2020/01/Loggi-logo-Brazil.png" alt="calendario"
+            style="width: 90px; height: 90px;"> Apoiador 3</a>
+
+                <a style="display: flex; flex-direction: column; align-items: center; font-size: 15px"><img
+            src="https://lh3.googleusercontent.com/proxy/5x4e2y0TcqEgi4CoAK5L3frEo71bbvlDidOzW0TrTHHpeElj5sG5tnFPGdPxYrY9I59mO7nHWR6d9LC1CBnWOKfj31N9suWM9i76agBC63LBRiC2FaiRQMMTkB-2FSxN" alt="calendario"
+            style="width: 90px; height: 90px;"> Apoiador 4</a>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
